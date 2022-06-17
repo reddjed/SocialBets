@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-SocialBets-E382DC2F-E590-4036-9E2F-6CECE1EE0242</UserSecretsId>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\SocialBets.Domain.Core\SocialBets.Domain.Core.csproj" />
+    <ProjectReference Include="..\SocialBets.Infrastructure.BusinessLogic\SocialBets.Infrastructure.BusinessLogic.csproj" />
+    <ProjectReference Include="..\SocialBets.Infrastructure.DataAccess\SocialBets.Infrastructure.DataAccess.csproj" />
+    <ProjectReference Include="..\SocialBets.Services.Interfaces\SocialBets.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

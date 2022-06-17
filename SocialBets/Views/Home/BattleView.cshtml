@@ -1,0 +1,59 @@
+﻿@model SocialBets.Domain.Core.Models.CurrentBattle
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<h4>CurrentBattle</h4>
+<hr />
+<div class="row">
+    <div class="auth">
+        <form asp-controller="Battle" asp-action="Add" method="post">
+           
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+            <div class="form-group">
+                <label asp-for="TimeOfStart" class="control-label"></label>
+                <input asp-for="TimeOfStart" value="@DateTime.Now" class="form-control" />
+                <span asp-validation-for="TimeOfStart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TimeOfEnd" class="control-label"></label>
+                <input asp-for="TimeOfEnd" class="form-control" />
+                <span asp-validation-for="TimeOfEnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstPlayerUrl" class="control-label"></label>
+                <input asp-for="FirstPlayerUrl" class="form-control" />
+                <span asp-validation-for="FirstPlayerUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SecondPlayerUrl" class="control-label"></label>
+                <input asp-for="SecondPlayerUrl" class="form-control" />
+                <span asp-validation-for="SecondPlayerUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bet" class="control-label"></label>
+                <input asp-for="Bet" class="form-control" />
+                <span asp-validation-for="Bet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SocialNetwork" class="control-label"></label>
+                <input asp-for="SocialNetwork" class="form-control" />
+                <span asp-validation-for="SocialNetwork" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn-get-started" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
